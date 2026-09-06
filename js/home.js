@@ -28,19 +28,9 @@ closePopUpBtn.addEventListener('click', function(){
 //****************money add section code start*********************
 
 const moneyAddBtn = document.getElementById('add_money_btn');
-// moneyAddBtn.addEventListener('click', function(){
-//     const bankName = document.getElementById('user_bank').value;
-//     const accountNumber = document.getElementById('account_number').value;
-//     const addAmount = parseInt(document.getElementById('add_amount').value);
-//     const userPin = document.getElementById('user_pin').value;
-//     const totalBalance = parseInt(document.getElementById('balance').innerText);
 
-//     const updateBalance = addAmount + totalBalance;
 
-//     document.getElementById('balance').innerText = updateBalance;
-
-// });
-
+const validPinNumber = 1234;
 
 moneyAddBtn.addEventListener('click', function(e){
     e.preventDefault();
@@ -48,10 +38,19 @@ moneyAddBtn.addEventListener('click', function(e){
     const userBank = document.getElementById('user_bank').value;
     const userAccountNumber = document.getElementById('account_number').value;
     const userMoney = parseInt(document.getElementById('add_amount').value);
-    const userPin = document.getElementById('user_pin').value;
+    const userPin = parseInt(document.getElementById('user_pin').value);
 
     const oldBalance = parseInt(document.getElementById('balance').innerText);
 
+    if(userAccountNumber.length < 11){
+        alert('provide valid account number');
+        return;
+    }
+
+    if(userPin !== validPinNumber){
+        alert('wrong pin');
+        return;
+    }
 
     const updateBalance = userMoney + oldBalance;
 

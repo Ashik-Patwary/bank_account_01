@@ -1,0 +1,126 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #e0dbdb;
+}
+
+.header_container {
+    padding: 10px;
+  height: auto;
+  width: auto;
+  background-color: #fff;
+  border: 1px solid #8b8b8b;
+}
+.header_content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.balance_details{
+    display: flex;
+    gap: 30px;
+}
+.log_out_btn_box button{
+    height: 35px;
+    width: 130px;
+    cursor: pointer;
+}
+.wlc_section{
+    margin: 50px 0 0 50px;
+    height: auto;
+    width: 40%;
+}
+.wlc_section span img{
+    height: 50px;
+    width: 50px;
+}
+
+.transaction_section{
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 10px;
+    height: 300px;
+    width: 50%;
+    margin:50px auto;
+    background-color: #fff;
+}
+
+.transaction_section .button{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: 100px;
+    border-radius: 10px;
+    font-size: 1.1em;
+    font-weight: bolder;
+    cursor: pointer;
+    
+}
+.transaction_section .button:hover{
+    background: transparent;
+    border: 1px solid #1877f2;
+    color: #1877f2;
+}
+.transaction_section button span img{
+    height: 50px;
+}
+
+.add_money_popup{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    position: absolute;
+    height: auto;
+    width: 52%;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 8px 8px #8b8b8b;
+    background-color: #fff;
+    /* display: none; */
+}
+.hidden{
+    display: none;
+}
+#close_popup_btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 35px;
+    width: 35px;
+    font-size: 1.1em;
+    font-weight: bolder;
+    border: none;
+    background-color: #ff0000;
+    color: #fff;
+    cursor: pointer;
+}
+#close_popup_btn:hover{
+    box-shadow: 0 0 2px 2px #ff0000;
+}
+.popup_container input{
+    height: 35px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.user_choice{
+    height: 35px;
+    width: 300px;
+}
+#add_money_btn{
+    height: 30px;
+    width: 100%;
+    margin-top: 15px;
+    font-size: 1.2em;
+    font-weight: bolder;
+    border: none;
+    border-radius: 3px;
+    background-color: #1877f2;
+    color: #fff;
+    cursor: pointer;
+}

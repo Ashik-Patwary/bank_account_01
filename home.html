@@ -33,11 +33,11 @@
     </section>
     <section class="transaction_section">
       <button id="add_money_popup" class="button"><span><img src="assets/wallet1.png" alt=""></span>Add Money</button>
-      <button class="button"><span><img src="assets/send1.png" alt=""></span>Cash Out</button>
+      <button id="cash_out_popup" class="button"><span><img src="assets/send1.png" alt=""></span>Cash Out</button>
       <button class="button"><span><img src="assets/money1.png" alt=""></span>Transfer Money</button>
       <button class="button"><span><img src="assets/bonus1.png" alt=""></span>Get Bonus</button>
       <button class="button"><span><img src="assets/purse1.png" alt=""></span>Pay Bill</button>
-      <button class="button"><span><img src="assets/transaction1.png" alt=""></span>Transaction</button>
+      <button id="transaction_popup_btn" class="button"><span><img src="assets/transaction1.png" alt=""></span>Transaction</button>
     </section>
 
     <!--************ Add money popup start************* -->
@@ -68,7 +68,7 @@
     
 
     <!--************ Cash OUt popup start************* -->
-    <form id="Cash_out_popup" class="popup ">
+    <form id="Cash_out_popup" class="popup hidden">
       <button id="close_popup_btn" class="close_popup_btn">X</button>
       <div class="popup_container">
         <h1>Cash out</h1>
@@ -93,11 +93,11 @@
     <!--************ Cash OUt popup start************* -->
 
     <!--************ Transaction popup Start************* -->
-    <section id="transaction_popup" class="popup ">
+    <section id="transaction_popup" class="popup hidden">
       <button id="close_popup_btn" class="close_popup_btn">X</button>
       <div id="transaction_history">
         <h4 class="transaction">Transaction History</h4>
-        
+
       </div>
     </section>
     <!--************ Transaction popup Start************* -->

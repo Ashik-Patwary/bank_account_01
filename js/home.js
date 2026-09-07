@@ -1,25 +1,61 @@
 //****************Pop up model open Code start**********************
 const openPopUPBtn = document.getElementById('add_money_popup');
+const cashOutPopupBtn = document.getElementById('cash_out_popup');
+const transactionPopupBtn = document.getElementById('transaction_popup_btn'); 
 const popUpBox = document.getElementById('popup');
-const closePopUpBtn = document.getElementById('close_popup_btn');
+const cashOutPopup = document.getElementById('Cash_out_popup');
+const transactionPopup = document.getElementById('transaction_popup');
+const closePopUpBtn = document.querySelectorAll('.close_popup_btn');
 
 
-function popupModel() {
+function popupModelAddCash() {
     popUpBox.classList.remove('hidden');
+    cashOutPopup.classList.add('hidden');
+    transactionPopup.classList.add('hidden');
     
 }
 
+
+function popupModelCashOut() {
+    popUpBox.classList.add('hidden');
+    cashOutPopup.classList.remove('hidden');
+    transactionPopup.classList.add('hidden');
+    
+}
+
+
+function popupModelTransactionPopup() {
+    popUpBox.classList.add('hidden');
+    cashOutPopup.classList.add('hidden');
+    transactionPopup.classList.remove('hidden');
+    
+}
+
+
+
 function closePopupBox (){
     popUpBox.classList.add('hidden');
+    cashOutPopup.classList.add('hidden');
+    transactionPopup.classList.add('hidden');
 }
 
 
 openPopUPBtn.addEventListener('click', function(){
-    popupModel()
+   popupModelAddCash()
 });
 
+cashOutPopupBtn.addEventListener('click', function(){
+    popupModelCashOut()
+});
+
+transactionPopupBtn.addEventListener('click', function(){
+    popupModelTransactionPopup()
+});
+
+
+
 closePopUpBtn.addEventListener('click', function(){
-    closePopupBox ()
+    closePopupBox()
 });
 //****************Pop up model open Code end**********************
 

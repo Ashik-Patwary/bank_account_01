@@ -39,8 +39,11 @@
       <button class="button"><span><img src="assets/purse1.png" alt=""></span>Pay Bill</button>
       <button class="button"><span><img src="assets/transaction1.png" alt=""></span>Transaction</button>
     </section>
-    <form id="popup" class="add_money_popup hidden">
-      <button id="close_popup_btn">X</button>
+
+    <!--************ Add money popup start************* -->
+
+    <form id="popup" class="popup hidden">
+      <button id="close_popup_btn" class="close_popup_btn">X</button>
       <div class="popup_container">
         <h1>Add Money</h1>
         <p>Select a bank</p>
@@ -61,6 +64,44 @@
         <button id="add_money_btn">Add Money</button>
       </div>
     </form>
+    <!--************ Add money popup end************* -->
+    
+
+    <!--************ Cash OUt popup start************* -->
+    <form id="Cash_out_popup" class="popup ">
+      <button id="close_popup_btn" class="close_popup_btn">X</button>
+      <div class="popup_container">
+        <h1>Cash out</h1>
+        <p>Select a bank</p>
+        <select class="user_choice" name="" id="user_bank">
+          <option value="A Bank">A Bank</option>
+          <option value="B Bank">B Bank</option>
+          <option value="C Bank">C Bank</option>
+          <option value="D Bank">D Bank</option>
+          <option value="E Bank">E Bank</option>
+          <option value="F Bank">F Bank</option>
+        </select>
+        <p>Bank Account Number</p>
+        <input name="" id="account_number" autocomplete="off">
+        <p>Cash out amount</p>
+        <input name="" id="add_amount" autocomplete="off">
+        <p>Pin Number</p>
+        <input type="password" name="" id="user_pin" autocomplete="off">
+        <button id="add_money_btn">Cash Out</button>
+      </div>
+    </form>
+    <!--************ Cash OUt popup start************* -->
+
+    <!--************ Transaction popup Start************* -->
+    <section id="transaction_popup" class="popup ">
+      <button id="close_popup_btn" class="close_popup_btn">X</button>
+      <div id="transaction_history">
+        <h4 class="transaction">Transaction History</h4>
+        
+      </div>
+    </section>
+    <!--************ Transaction popup Start************* -->
+    
     <script src="js/home.js"></script>
   </body>
 </html>

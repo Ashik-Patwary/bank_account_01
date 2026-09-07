@@ -86,7 +86,7 @@ body {
 .hidden{
     display: none;
 }
-#close_popup_btn{
+.close_popup_btn{
     position: absolute;
     top: 0;
     right: 0;
@@ -99,7 +99,7 @@ body {
     color: #fff;
     cursor: pointer;
 }
-#close_popup_btn:hover{
+.close_popup_btn:hover{
     box-shadow: 0 0 2px 2px #ff0000;
 }
 .popup_container input{

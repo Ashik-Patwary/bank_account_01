@@ -5,7 +5,7 @@ const transactionPopupBtn = document.getElementById('transaction_popup_btn');
 const popUpBox = document.getElementById('popup');
 const cashOutPopup = document.getElementById('Cash_out_popup');
 const transactionPopup = document.getElementById('transaction_popup');
-const closePopUpBtn = document.querySelectorAll('.close_popup_btn');
+
 
 
 function popupModelAddCash() {
@@ -33,13 +33,6 @@ function popupModelTransactionPopup() {
 
 
 
-function closePopupBox (){
-    popUpBox.classList.add('hidden');
-    cashOutPopup.classList.add('hidden');
-    transactionPopup.classList.add('hidden');
-}
-
-
 openPopUPBtn.addEventListener('click', function(){
    popupModelAddCash()
 });
@@ -52,11 +45,18 @@ transactionPopupBtn.addEventListener('click', function(){
     popupModelTransactionPopup()
 });
 
+const closePopUpBtn = document.querySelectorAll('.close_popup_btn');
 
 
-closePopUpBtn.addEventListener('click', function(){
-    closePopupBox()
+closePopUpBtn.forEach(function(btn){
+    btn.addEventListener('click', function(){
+        popUpBox.classList.add('hidden');
+        cashOutPopup.classList.add('hidden');
+        transactionPopup.classList.add('hidden');
+    });
 });
+
+
 //****************Pop up model open Code end**********************
 
 
